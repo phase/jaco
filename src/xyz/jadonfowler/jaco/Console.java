@@ -14,7 +14,6 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
@@ -34,7 +33,7 @@ public class Console {
 	JScrollPane scrollPane;
 
 	StyledDocument document;
-	boolean trace = false;
+	public boolean trace = false;
 
 	ArrayList<String> recentInputs = new ArrayList<String>();
 	int recentInputId = 0;
@@ -155,24 +154,8 @@ public class Console {
 	public void performCommand(String s){
 		final String[] args = s.split(" ");
 		try{
-			//TODO Setup Commands
-			
-			if(args[0].equalsIgnoreCase("clear")){
-				clear();
-			}else if(args[0].equalsIgnoreCase("popup")){
-				String message = "";
-				for(int i = 1; i < args.length; i++){
-					message += args[i];
-					if(i != args.length - 1){
-						message += " ";
-					}
-				}
-				JOptionPane.showMessageDialog(null, message, "Message", JOptionPane.INFORMATION_MESSAGE);
-			}else{
-				println(s, trace, new Color(255, 255, 255));
-			}
-			
-			
+			println("$ " + s, false, Color.GREEN);
+			Jaco.getCommandManager().performCommand(s, args);
 		}catch(Exception e){
 			println("Error > " + e.getMessage(), trace, new Color(255, 155, 155));
 		}
