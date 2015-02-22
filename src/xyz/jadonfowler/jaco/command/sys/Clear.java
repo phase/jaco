@@ -17,8 +17,7 @@ public class Clear extends Command{
 	 */
 	@Override
 	public void exec(String in, String[] args) {
-		if(args[0].equals("clear"))
-			Jaco.getConsole().clear();
+		Jaco.getConsole().clear();
 	}
 
 	/**

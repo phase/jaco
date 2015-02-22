@@ -33,6 +33,7 @@ public class CommandManager {
 			}
 		}
 		if(!ran){
+			Jaco.out.error("command not found");
 		}
 	}
 

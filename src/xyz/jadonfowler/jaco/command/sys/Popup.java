@@ -18,7 +18,6 @@ public class Popup extends Command{
 	 */
 	@Override
 	public void exec(String in, String[] args) {
-		if(!args[0].equalsIgnoreCase("popup")) return;
 		String message = "";
 		for(int i = 1; i < args.length; i++){
 			message += args[i];
