@@ -1,5 +1,5 @@
 ![Example]
-(http://prntscr.com/68dfch)
+(http://i.imgur.com/DiL9bNC.png)
 
 # jaco
 A console written in Java.
