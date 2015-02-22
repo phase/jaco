@@ -25,6 +25,10 @@ public class PrintStream {
 		Jaco.getConsole().println(s, Jaco.getConsole().trace, Color.GREEN);
 	}
 	
+	public void update(String s){
+		Jaco.getConsole().println(s, Jaco.Console().trace, Color.CYAN);
+	}
+	
 	public void error(String s){
 		Jaco.getConsole().println(s, Jaco.getConsole().trace, new Color(255, 155, 155));
 	}
