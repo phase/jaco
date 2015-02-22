@@ -51,7 +51,7 @@ public class Console {
 		
 		console = new JTextPane();
 		console.setEditable(false);
-		console.setFont(new Font("Courier New", Font.PLAIN, 12));
+		console.setFont(new Font("Open Sans", Font.PLAIN, 12));
 		console.setOpaque(false);
 		
 		document = console.getStyledDocument();
@@ -61,7 +61,7 @@ public class Console {
 		//input.setBorder(null);
 		input.setCaretColor(Color.GREEN);
 		input.setForeground(Color.WHITE);
-		input.setFont(new Font("Courier New", Font.PLAIN, 12));
+		input.setFont(new Font("Open Sans", Font.PLAIN, 12));
 		input.setOpaque(false);
 		
 		input.addActionListener(new ActionListener(){

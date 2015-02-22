@@ -12,6 +12,8 @@ public class SystemCommandManager {
 	public SystemCommandManager(){
 		new Popup();
 		new Clear();
+		new Open();
+		new Print();
 	}
 	
 }
