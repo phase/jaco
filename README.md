@@ -1,3 +1,6 @@
+![Example]
+(http://prntscr.com/68dfch)
+
 # jaco
 A console written in Java.
 
