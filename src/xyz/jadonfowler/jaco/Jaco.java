@@ -13,22 +13,31 @@ import xyz.jadonfowler.jaco.sys.out.PrintStream;
  */
 public class Jaco {
 	
-	static Console console;
-	static CommandManager commandManager;
+	private static Console console;
+	private static CommandManager commandManager;
 	public static PrintStream out;
+	private static boolean initialized;
 	
 	public static void main(String... args){
+		init();
+	}
+	
+	public static void init(){
+		initialized = true;
 		console = new Console();
 		commandManager = new CommandManager();
 		new SystemCommandManager();
 		out = new PrintStream();
+		
 	}
 	
 	public static Console getConsole(){
+		if(!initialized) init();
 		return console;
 	}
 	
 	public static CommandManager getCommandManager(){
+		if(!initialized) init();
 		return commandManager;
 	}
 	

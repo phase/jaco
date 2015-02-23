@@ -13,7 +13,7 @@ import xyz.jadonfowler.jaco.Jaco;
  */
 public class CommandManager {
 
-	ArrayList<Command> commands;
+	private ArrayList<Command> commands;
 
 	public CommandManager() {
 		commands = new ArrayList<Command>();
@@ -32,9 +32,8 @@ public class CommandManager {
 				ran = true;
 			}
 		}
-		if(!ran){
+		if(!ran)
 			Jaco.out.error("command not found");
-		}
 	}
 
 }

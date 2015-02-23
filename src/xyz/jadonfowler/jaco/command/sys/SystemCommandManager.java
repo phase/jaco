@@ -14,6 +14,7 @@ public class SystemCommandManager {
 		new Clear();
 		new Open();
 		new Print();
+		new Trace();
 	}
 	
 }
