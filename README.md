@@ -10,11 +10,11 @@ This is a console written in Java using Swing.
 ###Commands
 Make your class extend the `Command` class.
 ```java
-public class TestCommand extends Class
+public class TestCommand extends Command
 ```
 (Be sure to make a new instance in your main method)
 ```java
-public static void main(String... args){
+public static void main(String[] args){
 	new TestCommand();
 }
 ```
