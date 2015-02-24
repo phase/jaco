@@ -15,6 +15,8 @@ public class SystemCommandManager {
 		new Open();
 		new Print();
 		new Trace();
+		new Off();//TODO Remove
+		new Help();
 	}
 	
 }

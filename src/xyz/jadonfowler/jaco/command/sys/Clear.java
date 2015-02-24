@@ -28,4 +28,12 @@ public class Clear extends Command{
 		return "clear";
 	}
 
+	/**
+	 * @see xyz.jadonfowler.jaco.command.Command#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return "Clear the screen";
+	}
+
 }

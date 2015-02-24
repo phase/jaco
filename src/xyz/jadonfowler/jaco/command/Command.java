@@ -18,5 +18,7 @@ public abstract class Command {
 	public abstract void exec(String in, String[] args);
 	
 	public abstract String getCommand();
+
+	public abstract String getDescription();
 	
 }

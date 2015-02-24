@@ -42,4 +42,12 @@ public class Open extends Command {
 		return "open";
 	}
 
+	/**
+	 * @see xyz.jadonfowler.jaco.command.Command#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return "Open a webpage";
+	}
+
 }

@@ -26,7 +26,7 @@ public class PrintStream {
 	}
 	
 	public void update(String s){
-		Jaco.getConsole().println(s, Jaco.Console().trace, Color.CYAN);
+		Jaco.getConsole().println(s, Jaco.getConsole().trace, Color.CYAN);
 	}
 	
 	public void error(String s){

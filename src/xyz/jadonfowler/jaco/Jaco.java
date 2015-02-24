@@ -6,6 +6,7 @@ package xyz.jadonfowler.jaco;
 
 import xyz.jadonfowler.jaco.command.CommandManager;
 import xyz.jadonfowler.jaco.command.sys.SystemCommandManager;
+import xyz.jadonfowler.jaco.sys.in.InputStream;
 import xyz.jadonfowler.jaco.sys.out.PrintStream;
 
 /**
@@ -16,6 +17,7 @@ public class Jaco {
 	private static Console console;
 	private static CommandManager commandManager;
 	public static PrintStream out;
+	public static InputStream in;
 	private static boolean initialized;
 	
 	public static void main(String... args){
@@ -28,7 +30,7 @@ public class Jaco {
 		commandManager = new CommandManager();
 		new SystemCommandManager();
 		out = new PrintStream();
-		
+		in = new InputStream();
 	}
 	
 	public static Console getConsole(){

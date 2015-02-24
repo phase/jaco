@@ -28,4 +28,12 @@ public class Trace extends Command {
 		return "trace";
 	}
 
+	/**
+	 * @see xyz.jadonfowler.jaco.command.Command#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return "Trace where commands come from";
+	}
+
 }

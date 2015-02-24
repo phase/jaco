@@ -6,7 +6,6 @@ package xyz.jadonfowler.jaco;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -64,6 +63,7 @@ public class Console {
 		//input.setFont(new Font("Open Sans", Font.PLAIN, 12));
 		input.setOpaque(false);
 		
+		//Input
 		input.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				String in = input.getText();
@@ -72,6 +72,7 @@ public class Console {
 						recentInputs.add(in);
 						recentInputId = 0;
 					}
+					Jaco.in.input(in);
 					performCommand(in);
 					scrollBottom();
 					input.selectAll();
@@ -79,6 +80,7 @@ public class Console {
 			}
 		});
 		
+		//Previous inputs
 		input.addKeyListener(new KeyListener(){
 			public void keyPressed(KeyEvent e){
 				if(e.getKeyCode() == KeyEvent.VK_UP){

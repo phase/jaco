@@ -36,4 +36,12 @@ public class Popup extends Command{
 		return "popup";
 	}
 
+	/**
+	 * @see xyz.jadonfowler.jaco.command.Command#getDescription()
+	 */
+	@Override
+	public String getDescription() {
+		return "Popup a message";
+	}
+
 }

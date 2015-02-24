@@ -14,6 +14,8 @@ import xyz.jadonfowler.jaco.Jaco;
 public class CommandManager {
 
 	private ArrayList<Command> commands;
+	
+	public boolean shouldRun = true;
 
 	public CommandManager() {
 		commands = new ArrayList<Command>();
@@ -25,6 +27,7 @@ public class CommandManager {
 	}
 
 	public void performCommand(String in, String[] args) {
+		if(!shouldRun) return;
 		boolean ran = false;
 		for (Command c : commands) {
 			if(c.getCommand().equalsIgnoreCase(args[0])){
@@ -34,6 +37,10 @@ public class CommandManager {
 		}
 		if(!ran)
 			Jaco.out.error("command not found");
+	}
+	
+	public ArrayList<Command> getCommands() {
+		return commands;
 	}
 
 }

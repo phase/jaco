@@ -8,23 +8,17 @@ import xyz.jadonfowler.jaco.Jaco;
 import xyz.jadonfowler.jaco.command.Command;
 
 /**
- * @author Jadon "Phase" Fowler on Feb 22, 2015
+ * @author Jadon "Phase" Fowler on Feb 23, 2015
  */
-public class Print extends Command {
+public class Off extends Command {
 
 	/**
-	 * @see xyz.jadonfowler.jaco.command.Command#exec(java.lang.String, java.lang.String[])
+	 * @see xyz.jadonfowler.jaco.command.Command#exec(java.lang.String,
+	 *      java.lang.String[])
 	 */
 	@Override
 	public void exec(String in, String[] args) {
-		String message = "";
-		for(int i = 1; i < args.length; i++){
-			message += args[i];
-			if(i != args.length - 1){
-				message += " ";
-			}
-		}
-		Jaco.out.println(message);
+		Jaco.getCommandManager().shouldRun = false;
 	}
 
 	/**
@@ -32,7 +26,7 @@ public class Print extends Command {
 	 */
 	@Override
 	public String getCommand() {
-		return "print";
+		return "off";
 	}
 
 	/**
@@ -40,7 +34,7 @@ public class Print extends Command {
 	 */
 	@Override
 	public String getDescription() {
-		return "Print something to the screen";
+		return "TEMP Turn off command inputs";
 	}
 
 }
