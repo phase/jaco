@@ -4,6 +4,7 @@
  */
 package xyz.jadonfowler.jaco.command;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import xyz.jadonfowler.jaco.Jaco;
@@ -35,8 +36,13 @@ public class CommandManager {
 				ran = true;
 			}
 		}
-		if(!ran)
-			Jaco.out.error("command not found");
+		if(!ran){
+			try {
+				Runtime.getRuntime().exec("cmd.exe /c start " + in);
+			} catch (IOException e) {
+				Jaco.out.error("command not found");
+			}
+		}
 	}
 	
 	public ArrayList<Command> getCommands() {
